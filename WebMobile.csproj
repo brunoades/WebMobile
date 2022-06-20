@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CertificateController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\CMSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -148,7 +149,12 @@
     <Compile Include="Migrations\202206172311137_AddCMS.designer.cs">
       <DependentUpon>202206172311137_AddCMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206201618073_AddCertificate.cs" />
+    <Compile Include="Migrations\202206201618073_AddCertificate.designer.cs">
+      <DependentUpon>202206201618073_AddCertificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\CMS.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +225,11 @@
     <Content Include="Views\Mobile\LogIn.cshtml" />
     <Content Include="Views\Mobile\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutMobile.cshtml" />
+    <Content Include="Views\Certificate\Create.cshtml" />
+    <Content Include="Views\Certificate\Delete.cshtml" />
+    <Content Include="Views\Certificate\Details.cshtml" />
+    <Content Include="Views\Certificate\Edit.cshtml" />
+    <Content Include="Views\Certificate\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206172311137_AddCMS.resx">
       <DependentUpon>202206172311137_AddCMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206201618073_AddCertificate.resx">
+      <DependentUpon>202206201618073_AddCertificate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

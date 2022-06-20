@@ -15,5 +15,7 @@ namespace WebMobile.DAL
         public DbSet<User> Users { get; set; }
 
         public DbSet<CMS> CMSs { get; set; }
+
+        public DbSet<Certificate> Certificates { get; set; }
     }
 }

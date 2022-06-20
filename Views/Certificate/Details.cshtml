@@ -1,0 +1,55 @@
+﻿@model WebMobile.Models.Certificate
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <h2>Details</h2>
+
+            <div>
+                <h4>Certificate</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Client_Id)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Client_Id)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Md5sum)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Md5sum)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Password)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Password)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Editar", "Edit", null, new { id = Model.Id }, new { @class = "btn btn-success" })
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-2">
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>
+
+
