@@ -1,0 +1,166 @@
+﻿@*@model IEnumerable<WebMobile.Models.CMS>*@
+@model WebMobile.Models.CMS
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Conteúdo principal -->
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <header>
+                    <h1>
+                        @Html.DisplayFor(model => model.Slogan)
+                    </h1>
+                    <p>
+                        @Html.DisplayFor(model => model.SloganAppend)
+                    </p>
+                </header>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Newsletter -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h4>Assine nossa newsletter</h4>
+            <div class="input-group mx-auto">
+                <input type="text" class="form-control" placeholder="seuemail@email.com.br" aria-label="seu-email@email.com.br" aria-describedby="newsletter">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Assinar!</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero -->
+<section id="hero">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <img src="../img/Laptop.png" alt="" class="img-fluid w-50">
+                <p>
+                    @Html.DisplayFor(model => model.BigPicText)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Waves -->
+<div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+    </svg>
+</div>
+<!-- Carácteristicas -->
+<section id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>Foque no que interessa, deixe o resto com CredenciALL</h2>
+                <p>
+                    @Html.DisplayFor(model => model.FirstFeature)
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="../img/install.png" alt="" class="img-fluid w-75">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Permissões -->
+<section id="permissions">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="../img/permissions.png" alt="" class="img-fluid w-75">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>Deixe que CredenciALL lembre as senhas por você!</h2>
+                <p>
+                    @Html.DisplayFor(model => model.SecondFeature)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Carácteristicas 3 -->
+<section id="database">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h2>Controle quem pode instalar qual certificado de forma simples!</h2>
+                <p>
+                    @Html.DisplayFor(model => model.ThirdFeature)
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="../img/database.png" alt="" class="img-fluid w-75">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team-->
+<section id="team">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <img src="../img/humans.png" alt="" class="img-fluid w-75">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="members">
+    <div class="container">
+        <div class="row">
+            <h2>Nossa equipe</h2>
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="card-team">
+                    <div class="member-card d-flex flex-column align-items-lg-start">
+                        <div class="member-pic align-self-center">
+                            <img src="../img/profile2.jpg" alt="">
+                        </div>
+                        <div>
+                            <p class="member-quote">
+                                @Html.DisplayFor(model => model.FirstTeamMemberText)
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <p class="member-info">
+                                @Html.DisplayFor(model => model.FirstTeamMemberName) <span>@Html.DisplayFor(model => model.FirstTeamMemberRa)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="card-team">
+                    <div class="member-card d-flex flex-column align-items-lg-start">
+                        <div class="member-pic align-self-center">
+                            <img src="../img/profile.jpg" alt="">
+                        </div>
+                        <div>
+                            <p class="member-quote">
+                                @Html.DisplayFor(model => model.SecondTeamMemberText)
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <p class="member-info">@Html.DisplayFor(model => model.SecondTeamMemberName)
+                                <span>@Html.DisplayFor(model => model.SecondTeamMemberRa)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

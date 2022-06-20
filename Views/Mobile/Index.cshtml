@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WebMobile.Models.User>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Conteúdo principal -->
+        <section id="header-login">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <header>
+                            <img src="./img/logo.png" alt="" class="img-fluid">
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Dashboard</h1>
+                </div>
+            </div>
+        </section>
+        <section id="dashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sx-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Clientes</h5>
+                                <p class="card-text">Crie, Atualize e Delete clientes.</p>
+                                @Html.ActionLink("Gerenciar", "Index", "Client", null, new { @class = "btn btn-primary d-grid" })
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sx-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <i class="bi bi-key"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Certificados</h5>
+                                <p class="card-text">Crie, Atualize e Delete Certificados.</p>
+                                <a href="#" class="btn btn-primary d-grid">Gerenciar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sx-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Usuários</h5>
+                                <p class="card-text">Crie, Atualize e Delete usuários.</p>
+                                @Html.ActionLink("Gerenciar", "Index", "User", null, new { @class = "btn btn-primary d-grid" })
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sx-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Perfil</h5>
+                                <p class="card-text">Visualize e Atualize seu perfil.</p>
+                                <a href="#" class="btn btn-primary d-grid">Gerenciar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+

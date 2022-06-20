@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebMobile.Models.CMS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 pt-5">
+            <h2>Gerenciador da Home Page</h2>
+
+            @*<p>
+                @Html.ActionLink("Criar novo", "Create", null, new { @class = "btn btn-primary" })
+            </p>*@
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="col-12 pt-2">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Slogan:</strong>
+                        @Html.DisplayFor(modelItem => item.Slogan)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Subtítulo Slogan:</strong>
+                        @Html.DisplayFor(modelItem => item.SloganAppend)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Texto imagem principal:</strong>
+                        @Html.DisplayFor(modelItem => item.BigPicText)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Primeira característica:</strong>
+                        @Html.DisplayFor(modelItem => item.FirstFeature)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Segunda característica:</strong>
+                        @Html.DisplayFor(modelItem => item.SecondFeature)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Terceira característica:</strong>
+                        @Html.DisplayFor(modelItem => item.ThirdFeature)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Texto primeiro membro da equipe:</strong>
+                        @Html.DisplayFor(modelItem => item.FirstTeamMemberText)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Nome primeiro membro da equipe:</strong>
+                        @Html.DisplayFor(modelItem => item.FirstTeamMemberName)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>RA primeiro membro da equipe:</strong>
+                        @Html.DisplayFor(modelItem => item.FirstTeamMemberRa)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Texto segundo membro da equipe:</strong>
+                        @Html.DisplayFor(modelItem => item.SecondTeamMemberText)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Nome segundo membro da equipe:</strong>
+                        @Html.DisplayFor(modelItem => item.SecondTeamMemberName)
+                    </li>
+                    <li class="list-group-item">
+                        <strong>RA segundo membro da equipe:</strong>
+                        @Html.DisplayFor(modelItem => item.SecondTeamMemberRa)
+                    </li>
+                    <li class="list-group-item text-center">
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                        @*<div class="btn-group" role="group" aria-label="Basic outlined example">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        </div>*@
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>

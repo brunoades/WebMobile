@@ -1,0 +1,53 @@
+﻿@model WebMobile.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <h2>Detalhes</h2>
+
+            <div>
+                <h4>Cliente</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Code)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Code)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Cnpj)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Cnpj)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Editar", "Edit", null, new { id = Model.Id }, new {@class = "btn btn-success" })
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-2">
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>
