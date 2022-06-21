@@ -29,6 +29,9 @@ namespace WebMobile.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Certificate certificate = db.Certificates.Find(id);
+            int ClientId = certificate.Client_Id;
+            Client client = db.Clients.Find(ClientId);
+            ViewBag.ClientId = client.Name;
             if (certificate == null)
             {
                 return HttpNotFound();
